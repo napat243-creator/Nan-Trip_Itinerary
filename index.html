@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nan Itinerary</title>
+    <style>
+        :root {
+            --primary: #2C5F2D;
+            --secondary: #97BC62;
+            --bg: #F9FAFB;
+            --text: #1F2937;
+            --time-color: #4B5563;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6B7280;
+            margin-bottom: 25px;
+        }
+        .day-container {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+        .day-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 10px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #E5E7EB;
+        }
+        .event {
+            position: relative;
+            margin-bottom: 18px;
+        }
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -19px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--secondary);
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px var(--secondary);
+        }
+        .event.travel::before { background: #9CA3AF; box-shadow: 0 0 0 1px #9CA3AF; }
+        .event.hotel::before { background: #3B82F6; box-shadow: 0 0 0 1px #3B82F6; }
+        .event.gas::before { background: #F59E0B; box-shadow: 0 0 0 1px #F59E0B; }
+        
+        .time {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--time-color);
+            margin-bottom: 3px;
+        }
+        .desc {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .desc input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.75rem;
+            color: #2563EB;
+            text-decoration: none;
+            font-weight: 600;
+            background: #EFF6FF;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .highlight { font-weight: bold; color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <h1>🚗 แผนเที่ยวน่าน (Nan Loop)</h1>
+    <div class="subtitle">21 - 24 พฤศจิกายน 2026 | รถเช่า Mazda 2 1.3</div>
+
+    <!-- DAY 1 -->
+    <div class="day-container">
+        <div class="day-title">Day 1: อ.ปัว (เสาร์ 21 พ.ย.)</div>
+        <div class="timeline">
+            <div class="event">
+                <div class="time">10:45 - 11:00</div>
+                <div class="desc"><label><input type="checkbox"> 🛬 รับรถเช่าที่สนามบิน (FD3554)</label></div>
+            </div>
+            <div class="event travel">
+                <div class="time">11:00 - 12:00 (1 ชม.)</div>
+                <div class="desc">🚗 ขับรถจากสนามบิน มุ่งหน้า อ.ปัว</div>
+            </div>
+            <div class="event">
+                <div class="time">12:00 - 13:30 (1.5 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> ⛩️ ไหว้พระวัดภูเก็ต & มื้อเที่ยง</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=วัดภูเก็ต+ปัว" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">13:30 - 13:45 (15 นาที)</div>
+                <div class="desc">🚗 ขับรถไปร้านคาเฟ่</div>
+            </div>
+            <div class="event">
+                <div class="time">13:45 - 15:00 (1 ชม. 15 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> ☕️ Cocoa Valley Resort</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cocoa+Valley+Resort" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">15:00 - 15:15 (15 นาที)</div>
+                <div class="desc">🚗 ขับรถเข้าที่พัก</div>
+            </div>
+            <div class="event hotel">
+                <div class="time">15:15 - 17:00 (1.5 ชม.+)</div>
+                <div class="desc"><label><input type="checkbox"> 🏨 Check-in: Go high `o & พักผ่อน</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=Go+high+o+Sathan+Pua" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">17:00 - 17:15 (15 นาที)</div>
+                <div class="desc">🚗 ขับรถไปถนนคนเดิน</div>
+            </div>
+            <div class="event">
+                <div class="time">17:15 - 19:30 (2 ชม.+)</div>
+                <div class="desc"><label><input type="checkbox"> 🍜 ถนนคนเดินปัว (มื้อเย็น)</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=ถนนคนเดินปัว" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-container">
+        <div class="day-title">Day 2: ดอยภูคา - บ่อเกลือ (อาทิตย์ 22 พ.ย.)</div>
+        <div class="timeline">
+            <div class="event travel">
+                <div class="time">09:00 - 09:15 (15 นาที)</div>
+                <div class="desc">🚗 Check-out และขับไปปั๊มน้ำมัน</div>
+            </div>
+            <div class="event gas">
+                <div class="time">09:15 - 09:30 (15 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> ⛽ เติมน้ำมันเต็มถัง (PTT ปัว)</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=PTT+Station+ปัว" target="_blank" class="map-link" style="color:#B45309; background:#FEF3C7;">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">09:30 - 09:45 (15 นาที)</div>
+                <div class="desc">🚗 ขับรถไปร้านกาแฟ</div>
+            </div>
+            <div class="event">
+                <div class="time">09:45 - 11:00 (1 ชม. 15 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> ☕️ กาแฟบ้านไทลื้อ</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=กาแฟบ้านไทลื้อ+ปัว" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">11:00 - 12:00 (1 ชม.)</div>
+                <div class="desc">🚗 ขับไต่เขาเส้น 1256 (ดอยภูคา)</div>
+            </div>
+            <div class="event">
+                <div class="time">12:00 - 12:30 (30 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> ⛰️ จุดชมวิว 1715</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=จุดชมวิว+1715" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">12:30 - 13:15 (45 นาที)</div>
+                <div class="desc">🚗 ขับลงเขาเข้า อ.บ่อเกลือ</div>
+            </div>
+            <div class="event">
+                <div class="time">13:15 - 14:15 (1 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> 🥘 มื้อเที่ยง (บ่อเกลือวิวรีสอร์ท)</label></div>
+            </div>
+            <div class="event">
+                <div class="time">14:15 - 15:30 (1 ชม. 15 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> 🧂 บ่อเกลือสินเธาว์โบราณ</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=บ่อเกลือสินเธาว์โบราณ" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">15:30 - 15:45 (15 นาที)</div>
+                <div class="desc">🚗 ขับรถเข้าที่พัก</div>
+            </div>
+            <div class="event hotel">
+                <div class="time">15:45 เป็นต้นไป</div>
+                <div class="desc"><label><input type="checkbox"> 🏨 Check-in: ลมหายใจ โฮมสเตย์ & ทานมื้อเย็น</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=ลมหายใจ+โฮมสเตย์+บ่อเกลือใต้" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-container">
+        <div class="day-title">Day 3: ถนนลอยฟ้า - ตัวเมือง (จันทร์ 23 พ.ย.)</div>
+        <div class="timeline">
+            <div class="event travel">
+                <div class="time">08:30 - 09:00 (30 นาที)</div>
+                <div class="desc">🚗 Check-out และขับไปหมู่บ้านสะปัน</div>
+            </div>
+            <div class="event">
+                <div class="time">09:00 - 10:30 (1.5 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> ☕️ เดินเล่นสะปัน & หยุดเวลาคาเฟ่</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=หยุดเวลาคาเฟ่+สะปัน" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">10:30 - 11:30 (1 ชม.)</div>
+                <div class="desc">🚗 ขับลัดเลาะถนนลอยฟ้า (เส้น 1081)</div>
+            </div>
+            <div class="event">
+                <div class="time">11:30 - 12:00 (30 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> 🛣️ ถ่ายรูป ถนนโค้งหมายเลข 3</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=ถนนโค้งหมายเลข+3+น่าน" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">12:00 - 13:30 (1.5 ชม.)</div>
+                <div class="desc">🚗 ขับรถยาวเข้าสู่ตัวเมืองน่าน</div>
+            </div>
+            <div class="event">
+                <div class="time">13:30 - 14:30 (1 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> 🥘 มื้อเที่ยงในเมือง (เช่น ร้านเฮือนฮอม)</label></div>
+            </div>
+            <div class="event">
+                <div class="time">14:30 - 16:30 (2 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> 🖼️ วัดภูมินทร์ & ซุ้มลีลาวดี พิพิธภัณฑ์ฯ</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=วัดภูมินทร์+น่าน" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event hotel">
+                <div class="time">16:30 - 17:00 (30 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> 🏨 Check-in: Khum Muang Min</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=Khum+Muang+Min+Boutique+Hotel" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event">
+                <div class="time">17:30 - 20:30 (3 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> 🍽️ มื้อเย็นริมน้ำ & ของหวานป้านิ่ม</label></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-container">
+        <div class="day-title">Day 4: อำลาน่านนคร (อังคาร 24 พ.ย.)</div>
+        <div class="timeline">
+            <div class="event travel">
+                <div class="time">08:30 - 08:45 (15 นาที)</div>
+                <div class="desc">🚗 ขับรถไปจุดชมวิว</div>
+            </div>
+            <div class="event">
+                <div class="time">08:45 - 09:45 (1 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> 🌅 วัดพระธาตุเขาน้อย</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=วัดพระธาตุเขาน้อย" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">09:45 - 10:00 (15 นาที)</div>
+                <div class="desc">🚗 กลับที่พักเก็บของ</div>
+            </div>
+            <div class="event hotel">
+                <div class="time">11:00 - 11:30 (30 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> 🏨 Check-out จากโรงแรม</label></div>
+            </div>
+            <div class="event">
+                <div class="time">11:30 - 12:30 (1 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> 🍜 ข้าวซอยต้นน้ำ (มื้อเที่ยง)</label></div>
+            </div>
+            <div class="event travel">
+                <div class="time">12:30 - 12:45 (15 นาที)</div>
+                <div class="desc">🚗 ขับไปคาเฟ่ริมน้ำ</div>
+            </div>
+            <div class="event">
+                <div class="time">12:45 - 14:15 (1.5 ชม.)</div>
+                <div class="desc"><label><input type="checkbox"> ☕️ Erba Cafe</label><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=Erba+Cafe+น่าน" target="_blank" class="map-link">📍 Map</a></div>
+            </div>
+            <div class="event travel">
+                <div class="time">14:15 - 15:00 (45 นาที)</div>
+                <div class="desc">🚗 แวะซื้อของฝาก และขับไปสนามบิน</div>
+            </div>
+            <div class="event gas">
+                <div class="time">15:00 - 15:15 (15 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> ⛽ เติมน้ำมันคืนรถ (ใกล้สนามบิน)</label></div>
+            </div>
+            <div class="event">
+                <div class="time">15:15 - 15:30 (15 นาที)</div>
+                <div class="desc"><label><input type="checkbox"> ✈️ ถึงสนามบิน คืนรถ & รอขึ้นเครื่อง (FD3557)</label></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
